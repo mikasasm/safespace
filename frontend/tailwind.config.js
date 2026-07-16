@@ -6,13 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // The whole app is built from two colors plus one ink for text.
-        // cream = every surface, sun = primary actions/accents, ink = all text.
-        // Hairlines and muted text are ink at low opacity (e.g. ink/15, ink/70)
-        // rather than new colors.
-        cream: '#EBEBD3',
-        sun: '#F4D35E',
-        ink: '#1A1A12',
+        // Names describe the role, not the hue, so swapping the palette again
+        // means editing this block and src/theme.js and nothing else.
+        page: '#F4F7FA',   // app background
+        card: '#FFFFFF',   // raised surfaces: cards, modals, navbar, inputs
+        ink: '#1B2A3A',    // headings and body copy
+        muted: '#5A6B7C',  // secondary copy, placeholders
+        accent: '#3A7CA5', // primary actions; always pairs with white text
       },
     },
   },

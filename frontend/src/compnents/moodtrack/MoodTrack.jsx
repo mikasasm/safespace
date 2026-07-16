@@ -48,7 +48,7 @@ const MoodTrack = () => {
       {
         label: 'Mood Frequency',
         data: moodCounts,
-        backgroundColor: C.sun,
+        backgroundColor: C.accent,
         borderColor: C.line,
         borderWidth: 1,
       },
@@ -58,12 +58,12 @@ const MoodTrack = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto p-12 mt-20 bg-cream rounded-lg shadow-lg border border-ink/15" style={{ maxWidth: '840px', marginTop: '100px' }}>
-        <div className="bg-cream border border-ink/15 rounded-lg shadow-lg p-6 mb-6">
+      <div className="container mx-auto p-12 mt-20 bg-card rounded-lg shadow-lg border border-ink/15" style={{ maxWidth: '840px', marginTop: '100px' }}>
+        <div className="bg-card border border-ink/15 rounded-lg shadow-lg p-6 mb-6">
           <div className="text-center">
             <input
               type="date"
-              className="bg-cream border border-ink/15 text-ink text-sm rounded-lg focus:ring-ink focus:border-ink block w-full p-2.5 mb-4"
+              className="bg-card border border-ink/15 text-ink text-sm rounded-lg focus:ring-ink focus:border-ink block w-full p-2.5 mb-4"
               onChange={handleDateChange}
             />
           </div>
@@ -91,7 +91,7 @@ const MoodTrack = () => {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                   >
-                    <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-cream p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-card p-6 text-left align-middle shadow-xl transition-all">
                       <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-ink">
                         How do you feel today?
                       </Dialog.Title>
@@ -113,7 +113,7 @@ const MoodTrack = () => {
             </Dialog>
           </Transition>
         </div>
-        <div className="bg-cream border border-ink/15 rounded-lg shadow-lg p-6">
+        <div className="bg-card border border-ink/15 rounded-lg shadow-lg p-6">
           <div className="text-center mb-4">
             <h2 className="text-2xl font-semibold text-ink">Mood Frequency</h2>
           </div>

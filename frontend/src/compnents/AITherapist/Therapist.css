@@ -6,8 +6,8 @@
   max-width: 840px;
   margin: 0 auto;
   padding: 20px;
-  background: #EBEBD3; /* cream */
-  border: 1px solid rgba(26, 26, 18, 0.14);
+  background: #FFFFFF; /* card */
+  border: 1px solid rgba(27, 42, 58, 0.14);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 100px;
@@ -19,7 +19,7 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #1A1A12; /* ink */
+    color: #1B2A3A; /* ink */
   }
   
   .chat-box {
@@ -27,8 +27,8 @@
     overflow-y: auto;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #EBEBD3; /* cream */
-    border: 1px solid rgba(26, 26, 18, 0.14);
+    background-color: #FFFFFF; /* card */
+    border: 1px solid rgba(27, 42, 58, 0.14);
     border-radius: 8px;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -48,15 +48,15 @@
   }
   
   .user-message {
-    background-color: #F4D35E; /* sun */
-    color: #1A1A12; /* ink */
+    background-color: #3A7CA5; /* accent */
+    color: #FFFFFF; /* white on accent = 4.56:1; ink here is only 3.2:1 */
     align-self: flex-end;
   }
 
   .ai-message {
-    background-color: rgba(26, 26, 18, 0.05); /* ink at 5% */
-    color: #1A1A12; /* ink */
-    border: 1px solid rgba(26, 26, 18, 0.10);
+    background-color: rgba(27, 42, 58, 0.05); /* ink at 5% */
+    color: #1B2A3A; /* ink */
+    border: 1px solid rgba(27, 42, 58, 0.10);
     align-self: flex-start;
   }
   
@@ -76,17 +76,17 @@
   .input-field {
     flex-grow: 1;
     padding: 10px;
-    border: 1px solid rgba(26, 26, 18, 0.14);
-    background-color: #EBEBD3; /* cream */
-    color: #1A1A12; /* ink */
+    border: 1px solid rgba(27, 42, 58, 0.14);
+    background-color: #FFFFFF; /* card */
+    color: #1B2A3A; /* ink */
     border-radius: 20px;
     margin-right: 10px;
   }
   
   .send-button {
     padding: 10px 20px;
-    background-color: #F4D35E; /* sun */
-    color: #1A1A12; /* ink */
+    background-color: #3A7CA5; /* accent */
+    color: #FFFFFF; /* white on accent = 4.56:1 */
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -94,7 +94,7 @@
   }
   
   .send-button:hover {
-    background-color: rgba(244, 211, 94, 0.8); /* sun at 80% */
+    background-color: rgba(58, 124, 165, 0.9); /* accent at 90% */
   }
 
   

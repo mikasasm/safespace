@@ -86,8 +86,8 @@ const AllAnonymousPost = () => {
         <h1 className="text-3xl font-bold mb-6 text-center text-ink">All Anonymous Posts</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {anonymousPosts.map(post => (
-            <div key={post._id} className="bg-cream border border-ink/15 shadow-sm rounded-xl overflow-hidden">
-              <div className="bg-cream border-b border-ink/15 rounded-t-xl py-3 px-4 md:py-4 md:px-5">
+            <div key={post._id} className="bg-card border border-ink/15 shadow-sm rounded-xl overflow-hidden">
+              <div className="bg-card border-b border-ink/15 rounded-t-xl py-3 px-4 md:py-4 md:px-5">
                 <p className="mt-1 text-sm text-ink/70">
                   {post.featured && 'Featured'}
                 </p>

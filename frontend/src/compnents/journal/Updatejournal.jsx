@@ -278,8 +278,8 @@ const UpdateJournal = () => {
     return (
         <>
         <Navbar />
-        <div className="min-h-screen bg-cream flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-20">
-            <div className="max-w-3xl w-full bg-cream rounded-lg shadow-md ring-1 ring-ink/15 p-8">
+        <div className="min-h-screen bg-page flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-20">
+            <div className="max-w-3xl w-full bg-card rounded-lg shadow-md ring-1 ring-ink/15 p-8">
                 <h2 className="text-3xl font-bold leading-9 text-ink text-center mb-8">Update your journal!</h2>
                 <form className="space-y-8" onSubmit={handleSubmit}>
                     <div className="space-y-6">
@@ -291,7 +291,7 @@ const UpdateJournal = () => {
                                 id="title"
                                 value={title}
                                 onChange={handleChange}
-                                className="mt-2 block w-full rounded-md border-0 bg-cream py-1.5 text-ink placeholder:text-ink/50 shadow-sm ring-1 ring-inset ring-ink/15 focus:ring-2 focus:ring-ink sm:text-sm sm:leading-6"
+                                className="mt-2 block w-full rounded-md border-0 bg-card py-1.5 text-ink placeholder:text-ink/50 shadow-sm ring-1 ring-inset ring-ink/15 focus:ring-2 focus:ring-ink sm:text-sm sm:leading-6"
                                 placeholder="Your journal title"
                             />
                         </div>
@@ -303,7 +303,7 @@ const UpdateJournal = () => {
                                 rows={10}
                                 value={article}
                                 onChange={handleChange}
-                                className="mt-2 block w-full rounded-md border-0 bg-cream py-1.5 text-ink placeholder:text-ink/50 shadow-sm ring-1 ring-inset ring-ink/15 focus:ring-2 focus:ring-ink sm:text-sm sm:leading-6"
+                                className="mt-2 block w-full rounded-md border-0 bg-card py-1.5 text-ink placeholder:text-ink/50 shadow-sm ring-1 ring-inset ring-ink/15 focus:ring-2 focus:ring-ink sm:text-sm sm:leading-6"
                                 placeholder="Write your journal here..."
                             />
                         </div>
@@ -315,13 +315,13 @@ const UpdateJournal = () => {
                                 id="tags"
                                 value={tags}
                                 onChange={handleChange}
-                                className="mt-2 block w-full rounded-md border-0 bg-cream py-1.5 text-ink placeholder:text-ink/50 shadow-sm ring-1 ring-inset ring-ink/15 focus:ring-2 focus:ring-ink sm:text-sm sm:leading-6"
+                                className="mt-2 block w-full rounded-md border-0 bg-card py-1.5 text-ink placeholder:text-ink/50 shadow-sm ring-1 ring-inset ring-ink/15 focus:ring-2 focus:ring-ink sm:text-sm sm:leading-6"
                                 placeholder="e.g., travel, food, lifestyle"
                             />
                         </div>
                     </div>
 
-                    {error && <p className="mt-4 rounded-md bg-sun px-4 py-2 text-center text-sm font-medium text-ink">{error}</p>}
+                    {error && <p className="mt-4 rounded-md bg-accent px-4 py-2 text-center text-sm font-medium text-white">{error}</p>}
 
                     <div className="mt-8 flex justify-end space-x-4">
                         <button type="button" onClick={handleCancel} className="text-lg font-semibold leading-6 text-ink">
@@ -329,7 +329,7 @@ const UpdateJournal = () => {
                         </button>
                         <button
                             type="submit"
-                            className="rounded-md bg-sun px-6 py-3 text-lg font-semibold text-ink shadow-sm hover:bg-sun/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink">
+                            className="rounded-md bg-accent px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink">
                             Save
                         </button>
                     </div>

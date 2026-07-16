@@ -56,8 +56,8 @@ const CreateJournal = () => {
     <>
       <Navbar />
       <div className="w-screen mt-32">
-        <div className="max-w-md mx-auto bg-cream rounded-lg overflow-hidden shadow-md ring-1 ring-ink/15">
-        <div className="px-6 py-4 bg-cream">
+        <div className="max-w-md mx-auto bg-card rounded-lg overflow-hidden shadow-md ring-1 ring-ink/15">
+        <div className="px-6 py-4 bg-card">
 
             <h2 className="text-2xl font-bold text-ink mb-2">Create Journal</h2>
             <form onSubmit={handleSubmit}>
@@ -66,7 +66,7 @@ const CreateJournal = () => {
                   Title
                 </label>
                 <input
-                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-card text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
                   id="title"
                   type="text"
                   placeholder="Enter title"
@@ -79,7 +79,7 @@ const CreateJournal = () => {
                   Article
                 </label>
                 <textarea
-                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline h-32"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-card text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline h-32"
                   id="article"
                   placeholder="Write your journal here..."
                   value={article}
@@ -91,7 +91,7 @@ const CreateJournal = () => {
                   Tags
                 </label>
                 <input
-                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-card text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
                   id="tags"
                   type="text"
                   placeholder="Enter tags (comma separated)"
@@ -104,7 +104,7 @@ const CreateJournal = () => {
                   Cover Picture
                 </label>
                 <input
-                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-card text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
                   id="coverPicture"
                   type="file"
                   onChange={handleFileChange}
@@ -112,7 +112,7 @@ const CreateJournal = () => {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="bg-cream border border-ink/15 hover:bg-ink/5 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-card border border-ink/15 hover:bg-ink/5 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                   onClick={() => {
                     setTitle('');
@@ -124,7 +124,7 @@ const CreateJournal = () => {
                   Cancel
                 </button>
                 <button
-                  className="bg-sun hover:bg-sun/80 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-accent hover:bg-accent/90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
                   Save

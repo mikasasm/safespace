@@ -66,7 +66,7 @@ const Navbar = () => {
 
   return (
     
-    <div className="bg-cream w-full z-50 shadow-lg">
+    <div className="bg-card w-full z-50 shadow-lg">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -100,7 +100,7 @@ const Navbar = () => {
                 <div>
                   <button
                     type="button"
-                    className="relative flex rounded-full bg-ink text-sm focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 focus:ring-offset-cream"
+                    className="relative flex rounded-full bg-ink text-sm focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 focus:ring-offset-page"
                     id="user-menu-button"
                     aria-expanded={dropdownOpen}
                     aria-haspopup="true"
@@ -112,7 +112,7 @@ const Navbar = () => {
                   </button>
                 </div>
                 {dropdownOpen && (
-                  <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-cream py-1 shadow-lg ring-1 ring-ink/15 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
+                  <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-card py-1 shadow-lg ring-1 ring-ink/15 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
                     <a href={`/${user}/profile`} className="block px-4 py-2 text-sm text-ink" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
                     <a onClick={(e) => handleLogout(e)} href="#" className="block px-4 py-2 text-sm text-ink" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
                     <a onClick={handleDelete} href="#" className="block px-4 py-2 text-sm text-ink" role="menuitem" tabIndex="-1" id="user-menu-item-2">Delete Profile</a>
@@ -129,7 +129,7 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden" role="dialog" aria-modal="true">
             <div className="fixed inset-0 z-50"></div>
-            <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-cream px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-ink/15">
+            <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-card px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-ink/15">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
@@ -161,7 +161,7 @@ const Navbar = () => {
                       <div className="relative">
                         <button
                           type="button"
-                          className="relative flex rounded-full bg-ink text-sm focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 focus:ring-offset-cream"
+                          className="relative flex rounded-full bg-ink text-sm focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 focus:ring-offset-page"
                           id="user-menu-button-mobile"
                           aria-expanded={dropdownOpen}
                           aria-haspopup="true"
@@ -172,7 +172,7 @@ const Navbar = () => {
                           <img className="h-8 w-8 rounded-full" src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716336000&semt=ais_user" alt="Profile" />
                         </button>
                         {dropdownOpen && (
-                          <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-cream py-1 shadow-lg ring-1 ring-ink/15 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button-mobile" tabIndex="-1">
+                          <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-card py-1 shadow-lg ring-1 ring-ink/15 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button-mobile" tabIndex="-1">
                             <a href={`/${user}/profile`} className="block px-4 py-2 text-sm text-ink" role="menuitem" tabIndex="-1" id="user-menu-item-0-mobile">Your Profile</a>
                             <a onClick={(e) => handleLogout(e)} href="#" className="block px-4 py-2 text-sm text-ink" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
                     <a onClick={handleDelete} href="#" className="block px-4 py-2 text-sm text-ink" role="menuitem" tabIndex="-1" id="user-menu-item-2">Delete Profile</a>
@@ -199,8 +199,8 @@ const Navbar = () => {
 
             <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
-            <div className="inline-block align-bottom bg-cream rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-              <div className="bg-cream px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div className="inline-block align-bottom bg-card rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+              <div className="bg-card px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <h3 className="text-lg leading-6 font-medium text-ink" id="modal-title">
@@ -214,11 +214,11 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-cream px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button onClick={confirmDelete} type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-ink text-base font-medium text-cream hover:bg-ink/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink sm:ml-3 sm:w-auto sm:text-sm">
+              <div className="bg-card px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button onClick={confirmDelete} type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-ink text-base font-medium text-white hover:bg-ink/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink sm:ml-3 sm:w-auto sm:text-sm">
                   Delete
                 </button>
-                <button onClick={closeModal} type="button" className="mt-3 w-full inline-flex justify-center rounded-md border border-ink/15 shadow-sm px-4 py-2 bg-cream text-base font-medium text-ink hover:bg-ink/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                <button onClick={closeModal} type="button" className="mt-3 w-full inline-flex justify-center rounded-md border border-ink/15 shadow-sm px-4 py-2 bg-card text-base font-medium text-ink hover:bg-ink/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
                   Cancel
                 </button>
               </div>

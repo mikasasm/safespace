@@ -399,13 +399,13 @@ export default function Signup() {
     };
 
     return (
-        <div className="sans flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8" style={{ background: C.cream }}>
+        <div className="sans flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8" style={{ background: C.page }}>
             <style>{FONTS}</style>
             {(error || missingDetailsError) && (
                 <div className="fixed inset-0 flex items-center justify-center z-50">
                     <div className="fixed inset-0 transition-opacity" style={{ background: 'rgba(51,50,46,.45)' }} aria-hidden="true"></div>
-                    <div className="fade rounded-3xl overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" style={{ background: C.cream, border: `1px solid ${C.line}` }}>
-                        <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style={{ background: C.cream }}>
+                    <div className="fade rounded-3xl overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" style={{ background: C.card, border: `1px solid ${C.line}` }}>
+                        <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style={{ background: C.card }}>
                             <div className="sm:flex sm:items-start">
                                 <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10" style={{ background: 'rgba(146,129,122,.28)' }}>
                                     <svg className="h-6 w-6" style={{ color: C.ink }} fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -421,7 +421,7 @@ export default function Signup() {
                             </div>
                         </div>
                         <div className="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse" style={{ background: 'rgba(26,26,18,.05)', borderTop: `1px solid ${C.line}` }}>
-                            <button onClick={closeModal} type="button" className="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-5 py-2 text-base font-medium text-ink hover:opacity-90 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm" style={{ background: C.sun }}>
+                            <button onClick={closeModal} type="button" className="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-5 py-2 text-base font-medium text-ink hover:opacity-90 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm" style={{ background: C.accent }}>
                                 Close
                             </button>
                         </div>
@@ -429,7 +429,7 @@ export default function Signup() {
                 </div>
             )}
             <div className="w-full mt-16">
-                <form onSubmit={handleSubmit} className="fade max-w-3xl mx-auto rounded-3xl overflow-hidden" style={{ background: C.cream, border: `1px solid ${C.line}`, boxShadow: '0 10px 40px rgba(80,70,50,.07)' }}>
+                <form onSubmit={handleSubmit} className="fade max-w-3xl mx-auto rounded-3xl overflow-hidden" style={{ background: C.card, border: `1px solid ${C.line}`, boxShadow: '0 10px 40px rgba(80,70,50,.07)' }}>
                     <div className="px-8 py-8">
                         <h2 className="serif text-3xl mb-1 text-center" style={{ color: C.ink }}>Create your space</h2>
                         <p className="text-sm mb-8 text-center" style={{ color: C.muted }}>A few details, then you're in.</p>
@@ -583,7 +583,7 @@ export default function Signup() {
                         <button
                             type="submit"
                             className="rounded-2xl px-8 py-3 text-base font-medium text-ink transition-colors hover:opacity-90"
-                            style={{ background: C.sun }}>
+                            style={{ background: C.accent }}>
                             Create account
                         </button>
                     </div>

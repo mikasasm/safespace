@@ -55,7 +55,7 @@ const Readjournal = () => {
     };
 
     return (
-        <div className="bg-cream py-24 sm:py-32">
+        <div className="bg-card py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">Your Journal</h2>
@@ -68,7 +68,7 @@ const Readjournal = () => {
                         const coverImage = journal.coverPicture ? `http://localhost:8000/${journal.coverPicture}` : defaultCoverImage;
 
                         return (
-                            <div key={journal._id} className="bg-cream shadow-md ring-1 ring-ink/15 rounded-lg overflow-hidden relative">
+                            <div key={journal._id} className="bg-card shadow-md ring-1 ring-ink/15 rounded-lg overflow-hidden relative">
                                 <article className="p-6 flex flex-col justify-between h-full">
                                     <div>
                                         <div className="flex items-center gap-x-4 text-xs mb-3">
@@ -90,20 +90,20 @@ const Readjournal = () => {
                                     <img src={coverImage} alt="Cover" className="mt-auto h-24 w-full object-cover" />
                                     <div className="flex flex-wrap gap-2 mt-2">
                                         {journal.tags && journal.tags.map((tag, index) => (
-                                            <span key={index} className="inline-flex items-center rounded-full bg-sun px-3 py-0.5 text-sm font-medium text-ink">
+                                            <span key={index} className="inline-flex items-center rounded-full bg-accent px-3 py-0.5 text-sm font-medium text-white">
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
                                     <div className="absolute top-2 right-2 flex gap-2">
                                         <button
-                                            className="bg-sun text-ink px-3 py-1 rounded-md hover:bg-sun/80"
+                                            className="bg-accent text-white px-3 py-1 rounded-md hover:bg-accent/90"
                                             onClick={() => handleEdit(journal._id)}
                                         >
                                             Edit
                                         </button>
                                         <button
-                                            className="bg-ink text-cream px-3 py-1 rounded-md hover:bg-ink/80"
+                                            className="bg-ink text-white px-3 py-1 rounded-md hover:bg-ink/80"
                                             onClick={() => handleDelete(journal._id)}
                                         >
                                             Delete
@@ -117,11 +117,11 @@ const Readjournal = () => {
             </div>
             {showConfirmationModal && (
   <div className="modal-overlay">
-    <div className="modal-content" style={{ backgroundColor: C.cream }}>
+    <div className="modal-content" style={{ backgroundColor: C.card }}>
       <p className="text-lg font-semibold mb-4 text-ink">Are you sure you want to delete this journal?</p>
       <div className="modal-buttons">
-        <button className="bg-ink text-cream px-4 py-2 rounded-md mr-2 hover:bg-ink/80" onClick={confirmDelete}>Delete</button>
-        <button className="bg-cream border border-ink/15 text-ink px-4 py-2 rounded-md hover:bg-ink/5" onClick={closeModal}>Cancel</button>
+        <button className="bg-ink text-white px-4 py-2 rounded-md mr-2 hover:bg-ink/80" onClick={confirmDelete}>Delete</button>
+        <button className="bg-card border border-ink/15 text-ink px-4 py-2 rounded-md hover:bg-ink/5" onClick={closeModal}>Cancel</button>
       </div>
     </div>
   </div>

@@ -73,7 +73,7 @@ const Quiz = () => {
   return (
     <>
     <Navbar />
-    <div className="max-w-4xl mx-auto p-6 bg-cream border border-ink/15" style={{borderRadius: '1rem', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)', marginTop: '6rem'}}>
+    <div className="max-w-4xl mx-auto p-6 bg-card border border-ink/15" style={{borderRadius: '1rem', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)', marginTop: '6rem'}}>
       <h1 className="text-2xl font-bold mb-6 text-center text-ink">Mental Health Quiz</h1>
       {questions.map((question, index) => (
         <div key={index} className="mb-4 text-ink font-bold m-12">
@@ -82,7 +82,7 @@ const Quiz = () => {
             {options.map((option, optionIndex) => (
               <label
                 key={optionIndex}
-                className={`flex items-center p-3 px-5 block cursor-pointer rounded-full border border-ink/15 ${answers[index] === option ? 'bg-sun text-ink' : 'bg-ink/5 text-ink'} ${hoveredOption === index ? 'hover:bg-sun hover:text-ink' : 'hover:bg-ink/10'}`}
+                className={`flex items-center p-3 px-5 block cursor-pointer rounded-full border border-ink/15 ${answers[index] === option ? 'bg-accent text-white' : 'bg-ink/5 text-ink'} ${hoveredOption === index ? 'hover:bg-accent hover:text-white' : 'hover:bg-ink/10'}`}
                 onMouseEnter={() => handleOptionHover(index)}
                 onMouseLeave={handleOptionLeave}
               >
@@ -102,7 +102,7 @@ const Quiz = () => {
       ))}
       <button
   onClick={handleSubmit}
-  className="mt-6 w-half bg-sun hover:bg-sun/80 text-ink py-2 px-6 rounded-full transition-colors duration-300 ml-72"
+  className="mt-6 w-half bg-accent hover:bg-accent/90 text-white py-2 px-6 rounded-full transition-colors duration-300 ml-72"
 >
   Submit
 </button>
@@ -113,7 +113,7 @@ const Quiz = () => {
         </div>
       ) : (
         result && (
-          <div className="mt-6 p-4 bg-cream border border-ink/15 rounded-lg text-ink">
+          <div className="mt-6 p-4 bg-card border border-ink/15 rounded-lg text-ink">
             <h2 className="text-xl font-semibold mb-4">Analysis Result</h2>
             <p className="whitespace-pre-wrap">{result}</p>
           </div>

@@ -12,7 +12,7 @@ const AboutUs = () => {
           
       </div> 
       <div class="mb-6 lg:mb-16">
-      <div class="items-center rounded-xl shadow sm:flex border border-ink/15 bg-cream mb-6">
+      <div class="items-center rounded-xl shadow sm:flex border border-ink/15 bg-card mb-6">
               <a href="#">
                 <img class="w-full h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://media.licdn.com/dms/image/D4D03AQHNveWmqg3ScA/profile-displayphoto-shrink_800_800/0/1691382068333?e=2147483647&v=beta&t=xWKGao8_bC1HZNz9YaBXG_qTXpv6vb7Vtcu7oNVkGYc" alt="Manan Hingorani" />
               </a>
@@ -48,7 +48,7 @@ const AboutUs = () => {
                   </ul>
               </div>
           </div> 
-          <div class="items-center rounded-xl shadow sm:flex border border-ink/15 bg-cream mb-6">
+          <div class="items-center rounded-xl shadow sm:flex border border-ink/15 bg-card mb-6">
               <a href="#">
                 <img class="w-full h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://pbs.twimg.com/profile_images/1545729794817785858/owAuYEH-_400x400.jpg" alt="Shreya Ganjoo" />
               </a>

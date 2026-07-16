@@ -353,8 +353,8 @@ const ProfileUpdate = () => {
     return (
         <div>
             <div className="w-screen mt-32">
-                <div className="max-w-3xl mx-auto bg-cream rounded-lg overflow-hidden shadow-md">
-                    <div className="px-6 py-4 bg-cream">
+                <div className="max-w-3xl mx-auto bg-card rounded-lg overflow-hidden shadow-md">
+                    <div className="px-6 py-4 bg-card">
                         <h2 className="text-2xl font-bold text-ink mb-2 text-center">Update Profile</h2>
                         <form onSubmit={handleSubmit} className='space-y-6'>
                             <div className="mb-4">
@@ -365,7 +365,7 @@ const ProfileUpdate = () => {
                                     id="username"
                                     value={username}
                                     disabled
-                                    className="mt-1 block w-full rounded-md border-ink/15 bg-cream text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-ink/15 bg-card text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
                                 />
                             </div>
 
@@ -377,7 +377,7 @@ const ProfileUpdate = () => {
                                     id="name"
                                     value={name}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-ink/15 bg-cream text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-ink/15 bg-card text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
                                 />
                             </div>
 
@@ -389,7 +389,7 @@ const ProfileUpdate = () => {
                                     id="email"
                                     value={email}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-ink/15 bg-cream text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-ink/15 bg-card text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
                                 />
                             </div>
 
@@ -401,7 +401,7 @@ const ProfileUpdate = () => {
                                     id="newPassword"
                                     value={newPassword}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-ink/15 bg-cream text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-ink/15 bg-card text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
                                 />
                             </div>
 
@@ -413,7 +413,7 @@ const ProfileUpdate = () => {
                                     id="age"
                                     value={age}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-ink/15 bg-cream text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-ink/15 bg-card text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
                                 />
                             </div>
 
@@ -424,7 +424,7 @@ const ProfileUpdate = () => {
                                     name="gender"
                                     value={gender}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-ink/15 bg-cream text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-ink/15 bg-card text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
                                 >
                                     <option value="">Select Gender</option>
                                     <option value="Male">Male</option>
@@ -441,7 +441,7 @@ const ProfileUpdate = () => {
                                     rows={3}
                                     value={bio}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-ink/15 bg-cream text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-ink/15 bg-card text-ink shadow-sm focus:border-ink focus:ring-ink sm:text-sm"
                                 />
                                 <p className="mt-2 text-sm text-ink/70">Write a few sentences about yourself.</p>
                             </div>
@@ -449,21 +449,21 @@ const ProfileUpdate = () => {
                             <div className="flex items-center justify-between">
                                 <button
                                     type="button"
-                                    className="bg-cream border border-ink/15 hover:bg-ink/5 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                    className="bg-card border border-ink/15 hover:bg-ink/5 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                     onClick={handleCancel}
                                 >
                                     Cancel
                                 </button>
                                 <button
                                     type="submit"
-                                    className="bg-sun hover:bg-sun/80 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                    className="bg-accent hover:bg-accent/90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 >
                                     Save
                                 </button>
                             </div>
 
                             {error && (
-                                <p className="mt-4 rounded-md bg-sun px-3 py-2 text-sm text-ink">{error}</p>
+                                <p className="mt-4 rounded-md bg-accent px-3 py-2 text-sm text-white">{error}</p>
                             )}
                         </form>
                     </div>

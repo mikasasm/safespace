@@ -288,8 +288,8 @@ const Login = () => {
       {error && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="fixed inset-0 bg-ink/75 transition-opacity" aria-hidden="true"></div>
-          <div className="bg-cream rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
-            <div className="bg-sun px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div className="bg-card rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+            <div className="bg-accent px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
                 <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-ink/10 sm:mx-0 sm:h-10 sm:w-10">
                   <svg className="h-6 w-6 text-ink" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -304,8 +304,8 @@ const Login = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-cream px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-              <button onClick={closeModal} type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-sun text-base font-medium text-ink hover:bg-sun/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink sm:ml-3 sm:w-auto sm:text-sm">
+            <div className="bg-card px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <button onClick={closeModal} type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-accent text-base font-medium text-white hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink sm:ml-3 sm:w-auto sm:text-sm">
                 Close
               </button>
             </div>
@@ -313,7 +313,7 @@ const Login = () => {
         </div>
       )}
       <div className="w-screen mt-32">
-        <div className="max-w-md mx-auto bg-cream rounded-lg overflow-hidden shadow-md ring-1 ring-ink/15">
+        <div className="max-w-md mx-auto bg-card rounded-lg overflow-hidden shadow-md ring-1 ring-ink/15">
           <div className="px-6 py-4">
             <h2 className="text-2xl font-bold text-ink mb-2 text-center">Sign in to your account</h2>
             <form onSubmit={handleSubmit}>
@@ -322,7 +322,7 @@ const Login = () => {
                   Username
                 </label>
                 <input
-                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:border-ink focus:ring-ink focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-card text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:border-ink focus:ring-ink focus:shadow-outline"
                   id="username"
                   type="text"
                   placeholder="Enter username"
@@ -337,7 +337,7 @@ const Login = () => {
                   Password
                 </label>
                 <input
-                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:border-ink focus:ring-ink focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-card text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:border-ink focus:ring-ink focus:shadow-outline"
                   id="password"
                   type="password"
                   placeholder="Enter password"
@@ -349,7 +349,7 @@ const Login = () => {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="bg-cream border border-ink/15 hover:bg-ink/5 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-card border border-ink/15 hover:bg-ink/5 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                   onClick={() => {
                     setUsername('');
@@ -359,7 +359,7 @@ const Login = () => {
                   Cancel
                 </button>
                 <button
-                  className="bg-sun hover:bg-sun/80 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-accent hover:bg-accent/90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
                   Sign in
