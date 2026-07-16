@@ -31,19 +31,19 @@ const JournalDetail = () => {
     const coverImage = journal.coverPicture ? `http://localhost:8000/${journal.coverPicture}` : defaultCoverImage;
 
     return (
-        <div className="bg-white py-16 sm:py-24">
+        <div className="bg-cream py-16 sm:py-24">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0 text-center">
-                    <h2 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">{journal.title}</h2>
+                    <h2 className="text-5xl font-bold tracking-tight text-ink sm:text-6xl">{journal.title}</h2>
                 </div>
                 <div className="mt-10 flex justify-center">
                     <img src={coverImage} alt="Cover" className="h-96 w-full object-cover rounded-lg shadow-md" />
                 </div>
                 <div className="mt-10 max-w-2xl mx-auto text-left">
-                    <p className="text-lg leading-8 text-gray-800">{journal.article}</p>
+                    <p className="text-lg leading-8 text-ink">{journal.article}</p>
                     <div className="mt-5 flex flex-wrap gap-2">
                         {journal.tags && journal.tags.map((tag, index) => (
-                            <span key={index} className="inline-flex items-center rounded-full bg-blue-100 px-4 py-1 text-lg font-medium text-blue-800">
+                            <span key={index} className="inline-flex items-center rounded-full bg-sun px-4 py-1 text-lg font-medium text-ink">
                                 {tag}
                             </span>
                         ))}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import Loader from 'react-js-loader';
 import Navbar from '../navbar/Navbar';
+import C from '../../theme';
 
 
 
@@ -51,7 +52,7 @@ const Quiz = () => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
       const prompt = `Analyze the following mental health quiz answers and generate a short summary regarding the persons mental health and what can he do, use points and headings and generate answer separated by paragraphs, also give a space between different paragraphs:\n\n${questions.map((q, i) => `${i+1}. ${q} ${answers[i]}`).join('\n')}`;
       const result = await model.generateContent(prompt);
       const response = await result.response;
@@ -72,16 +73,16 @@ const Quiz = () => {
   return (
     <>
     <Navbar />
-    <div className="max-w-4xl mx-auto p-6" style={{background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)', borderRadius: '1rem', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)', marginTop: '6rem'}}>
-      <h1 className="text-2xl font-bold mb-6 text-center">Mental Health Quiz</h1>
+    <div className="max-w-4xl mx-auto p-6 bg-cream border border-ink/15" style={{borderRadius: '1rem', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)', marginTop: '6rem'}}>
+      <h1 className="text-2xl font-bold mb-6 text-center text-ink">Mental Health Quiz</h1>
       {questions.map((question, index) => (
-        <div key={index} className="mb-4 text-black font-bold m-12">
+        <div key={index} className="mb-4 text-ink font-bold m-12">
           <p className={`mb-2 text-lg`}>{`${index+1}. ${question}`}</p>
           <div className="flex flex-col space-y-2">
             {options.map((option, optionIndex) => (
               <label
                 key={optionIndex}
-                className={`flex items-center p-3 px-5 block cursor-pointer rounded-full border border-black border-opacity-20 ${hoveredOption === index ? 'hover:bg-black hover:text-white' : 'hover:bg-gray-200'}`}
+                className={`flex items-center p-3 px-5 block cursor-pointer rounded-full border border-ink/15 ${answers[index] === option ? 'bg-sun text-ink' : 'bg-ink/5 text-ink'} ${hoveredOption === index ? 'hover:bg-sun hover:text-ink' : 'hover:bg-ink/10'}`}
                 onMouseEnter={() => handleOptionHover(index)}
                 onMouseLeave={handleOptionLeave}
               >
@@ -91,7 +92,7 @@ const Quiz = () => {
                   value={option}
                   checked={answers[index] === option}
                   onChange={() => handleChange(index, option)}
-                  className="accent-primary"
+                  className="accent-ink"
                 />
                 <span className="ps-3 text-lg font-normal">{option}</span>
               </label>
@@ -101,18 +102,18 @@ const Quiz = () => {
       ))}
       <button
   onClick={handleSubmit}
-  className="mt-6 w-half bg-blue-500 hover:bg-blue-700 text-white py-2 px-6 rounded-full transition-colors duration-300 ml-72"
+  className="mt-6 w-half bg-sun hover:bg-sun/80 text-ink py-2 px-6 rounded-full transition-colors duration-300 ml-72"
 >
   Submit
 </button>
 
       {loading ? (
         <div className="flex justify-center mt-6">
-          <Loader type="spinner-cub" bgColor={"#000000"} color={"#FFFFFF"} title={"spinner-cub"} size={100} />
+          <Loader type="spinner-cub" bgColor={C.ink} color={C.ink} title={"spinner-cub"} size={100} />
         </div>
       ) : (
         result && (
-          <div className="mt-6 p-4 bg-gray-100 rounded-lg">
+          <div className="mt-6 p-4 bg-cream border border-ink/15 rounded-lg text-ink">
             <h2 className="text-xl font-semibold mb-4">Analysis Result</h2>
             <p className="whitespace-pre-wrap">{result}</p>
           </div>

@@ -83,27 +83,27 @@ const AllAnonymousPost = () => {
     <>
       <Navbar />
       <div className="container mx-auto py-8 mt-24">
-        <h1 className="text-3xl font-bold mb-6 text-center">All Anonymous Posts</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center text-ink">All Anonymous Posts</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {anonymousPosts.map(post => (
-            <div key={post._id} className="bg-gradient-to-br from-blue-gray-light to-blue-gray border border-gray-200 shadow-sm rounded-xl overflow-hidden">
-              <div className="bg-gray-100 border-b border-gray-200 rounded-t-xl py-3 px-4 md:py-4 md:px-5">
-                <p className="mt-1 text-sm text-gray-600">
+            <div key={post._id} className="bg-cream border border-ink/15 shadow-sm rounded-xl overflow-hidden">
+              <div className="bg-cream border-b border-ink/15 rounded-t-xl py-3 px-4 md:py-4 md:px-5">
+                <p className="mt-1 text-sm text-ink/70">
                   {post.featured && 'Featured'}
                 </p>
               </div>
               <div className="p-4 md:p-5">
-                <h3 className="text-lg font-bold text-gray-800">
+                <h3 className="text-lg font-bold text-ink">
                   {post.title}
                 </h3>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-ink/70">
                   {post.article}
                 </p>
                 <div className="flex items-center mt-4">
-                  <span className="text-gray-500 mr-2">Tags:</span>
+                  <span className="text-ink/70 mr-2">Tags:</span>
                   <div className="flex flex-wrap">
                     {post.tags.map((tag, index) => (
-                      <span key={index} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer">
+                      <span key={index} className="m-1 bg-ink/5 hover:bg-ink/10 text-ink rounded-full px-2 font-bold text-sm leading-loose cursor-pointer">
                         {tag}
                       </span>
                     ))}

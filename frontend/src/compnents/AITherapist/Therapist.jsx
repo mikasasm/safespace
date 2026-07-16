@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import Loader from 'react-js-loader';
 import Navbar from '../navbar/Navbar';
+import C from '../../theme';
 import './Therapist.css';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -28,7 +29,7 @@ const Therapist = () => {
     setLoading(true);
 
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
       const prompt = `Analyse the user's input and give suggestions or talk with them and provide an answer in paragraphs with spaces between paragraphs and points. Respond as if you are talking to the user in the first person, not the third person:\n\nUser: ${input}\nTherapist:`;
       const result = await model.generateContent(prompt);
       const response = await result.response;
@@ -73,7 +74,7 @@ const Therapist = () => {
               {msg.text}
             </div>
           ))}
-          {loading && <TypingAnimation color="#007BFF" />}
+          {loading && <TypingAnimation color={C.ink} />}
         </div>
         <div className="input-container">
           <input

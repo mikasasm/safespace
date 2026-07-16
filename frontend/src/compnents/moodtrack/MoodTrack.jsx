@@ -4,6 +4,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
 import Navbar from '../navbar/Navbar';
+import C from '../../theme';
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -47,7 +48,8 @@ const MoodTrack = () => {
       {
         label: 'Mood Frequency',
         data: moodCounts,
-        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+        backgroundColor: C.sun,
+        borderColor: C.line,
         borderWidth: 1,
       },
     ],
@@ -56,12 +58,12 @@ const MoodTrack = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto p-12 mt-20 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 rounded-lg shadow-lg border border-gray-400" style={{ maxWidth: '840px', marginTop: '100px' }}>
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+      <div className="container mx-auto p-12 mt-20 bg-cream rounded-lg shadow-lg border border-ink/15" style={{ maxWidth: '840px', marginTop: '100px' }}>
+        <div className="bg-cream border border-ink/15 rounded-lg shadow-lg p-6 mb-6">
           <div className="text-center">
             <input
               type="date"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+              className="bg-cream border border-ink/15 text-ink text-sm rounded-lg focus:ring-ink focus:border-ink block w-full p-2.5 mb-4"
               onChange={handleDateChange}
             />
           </div>
@@ -76,7 +78,7 @@ const MoodTrack = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <div className="fixed inset-0 bg-black bg-opacity-25" />
+                <div className="fixed inset-0 bg-ink bg-opacity-25" />
               </Transition.Child>
               <div className="fixed inset-0 overflow-y-auto">
                 <div className="flex items-center justify-center min-h-full p-4 text-center">
@@ -89,8 +91,8 @@ const MoodTrack = () => {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                   >
-                    <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                      <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
+                    <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-cream p-6 text-left align-middle shadow-xl transition-all">
+                      <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-ink">
                         How do you feel today?
                       </Dialog.Title>
                       <div className="mt-4 flex justify-around">
@@ -111,12 +113,23 @@ const MoodTrack = () => {
             </Dialog>
           </Transition>
         </div>
-        <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="bg-cream border border-ink/15 rounded-lg shadow-lg p-6">
           <div className="text-center mb-4">
-            <h2 className="text-2xl font-semibold text-gray-800">Mood Frequency</h2>
+            <h2 className="text-2xl font-semibold text-ink">Mood Frequency</h2>
           </div>
           <div className="mt-6 h-96">
-            <Bar data={data} options={{ responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }} />
+            <Bar
+              data={data}
+              options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                  x: { ticks: { color: C.ink }, grid: { color: C.line } },
+                  y: { ticks: { color: C.ink }, grid: { color: C.line } },
+                },
+              }}
+            />
           </div>
         </div>
       </div>

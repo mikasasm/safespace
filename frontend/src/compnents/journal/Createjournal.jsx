@@ -56,17 +56,17 @@ const CreateJournal = () => {
     <>
       <Navbar />
       <div className="w-screen mt-32">
-        <div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-md">
-        <div className="px-6 py-4" style={{ background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)' }}>
+        <div className="max-w-md mx-auto bg-cream rounded-lg overflow-hidden shadow-md ring-1 ring-ink/15">
+        <div className="px-6 py-4 bg-cream">
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">Create Journal</h2>
+            <h2 className="text-2xl font-bold text-ink mb-2">Create Journal</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
+                <label className="block text-ink text-sm font-bold mb-2" htmlFor="title">
                   Title
                 </label>
                 <input
-                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
                   id="title"
                   type="text"
                   placeholder="Enter title"
@@ -75,11 +75,11 @@ const CreateJournal = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="article">
+                <label className="block text-ink text-sm font-bold mb-2" htmlFor="article">
                   Article
                 </label>
                 <textarea
-                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline h-32"
                   id="article"
                   placeholder="Write your journal here..."
                   value={article}
@@ -87,11 +87,11 @@ const CreateJournal = () => {
                 ></textarea>
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="tags">
+                <label className="block text-ink text-sm font-bold mb-2" htmlFor="tags">
                   Tags
                 </label>
                 <input
-                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
                   id="tags"
                   type="text"
                   placeholder="Enter tags (comma separated)"
@@ -100,11 +100,11 @@ const CreateJournal = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="coverPicture">
+                <label className="block text-ink text-sm font-bold mb-2" htmlFor="coverPicture">
                   Cover Picture
                 </label>
                 <input
-                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:shadow-outline"
                   id="coverPicture"
                   type="file"
                   onChange={handleFileChange}
@@ -112,7 +112,7 @@ const CreateJournal = () => {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-cream border border-ink/15 hover:bg-ink/5 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                   onClick={() => {
                     setTitle('');
@@ -124,7 +124,7 @@ const CreateJournal = () => {
                   Cancel
                 </button>
                 <button
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-sun hover:bg-sun/80 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
                   Save

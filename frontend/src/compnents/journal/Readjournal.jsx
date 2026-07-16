@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 import axios from 'axios';
-import defaultCoverImage from './download.jpg'; 
+import defaultCoverImage from './download.jpg';
 import './Modal.css';
+import C from '../../theme';
 
 const Readjournal = () => {
     const [journals, setJournals] = useState([]);
@@ -54,34 +55,34 @@ const Readjournal = () => {
     };
 
     return (
-        <div className="bg-white py-24 sm:py-32">
+        <div className="bg-cream py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Your Journal</h2>
-                    <p className="mt-2 text-lg leading-8 text-gray-600">
+                    <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">Your Journal</h2>
+                    <p className="mt-2 text-lg leading-8 text-ink/70">
                         Keep your memorable days stored with you!
                     </p>
                 </div>
-                <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-ink/15 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                     {journals.map((journal) => {
                         const coverImage = journal.coverPicture ? `http://localhost:8000/${journal.coverPicture}` : defaultCoverImage;
 
                         return (
-                            <div key={journal._id} className="bg-white shadow-md rounded-lg overflow-hidden relative">
+                            <div key={journal._id} className="bg-cream shadow-md ring-1 ring-ink/15 rounded-lg overflow-hidden relative">
                                 <article className="p-6 flex flex-col justify-between h-full">
                                     <div>
                                         <div className="flex items-center gap-x-4 text-xs mb-3">
-                                            <time dateTime={journal.createdAt} className="text-gray-500">
+                                            <time dateTime={journal.createdAt} className="text-ink/70">
                                                 {new Date(journal.createdAt).toLocaleDateString()}
                                             </time>
                                         </div>
                                         <div className="group relative">
-                                            <h3 className="text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 mb-2">
+                                            <h3 className="text-lg font-semibold leading-6 text-ink group-hover:text-ink/70 mb-2">
                                                 <Link to={`/${username}/readjournals/${journal._id}`}>
                                                     {journal.title}
                                                 </Link>
                                             </h3>
-                                            <p className="line-clamp-3 text-sm leading-6 text-gray-600 mb-4">
+                                            <p className="line-clamp-3 text-sm leading-6 text-ink/70 mb-4">
                                                 {shortenText(journal.article, 50)} {/* Show first 50 characters */}
                                             </p>
                                         </div>
@@ -89,20 +90,20 @@ const Readjournal = () => {
                                     <img src={coverImage} alt="Cover" className="mt-auto h-24 w-full object-cover" />
                                     <div className="flex flex-wrap gap-2 mt-2">
                                         {journal.tags && journal.tags.map((tag, index) => (
-                                            <span key={index} className="inline-flex items-center rounded-full bg-blue-100 px-3 py-0.5 text-sm font-medium text-blue-800">
+                                            <span key={index} className="inline-flex items-center rounded-full bg-sun px-3 py-0.5 text-sm font-medium text-ink">
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
                                     <div className="absolute top-2 right-2 flex gap-2">
                                         <button
-                                            className="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600"
+                                            className="bg-sun text-ink px-3 py-1 rounded-md hover:bg-sun/80"
                                             onClick={() => handleEdit(journal._id)}
                                         >
                                             Edit
                                         </button>
                                         <button
-                                            className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600"
+                                            className="bg-ink text-cream px-3 py-1 rounded-md hover:bg-ink/80"
                                             onClick={() => handleDelete(journal._id)}
                                         >
                                             Delete
@@ -116,11 +117,11 @@ const Readjournal = () => {
             </div>
             {showConfirmationModal && (
   <div className="modal-overlay">
-    <div className="modal-content">
-      <p className="text-lg font-semibold mb-4">Are you sure you want to delete this journal?</p>
+    <div className="modal-content" style={{ backgroundColor: C.cream }}>
+      <p className="text-lg font-semibold mb-4 text-ink">Are you sure you want to delete this journal?</p>
       <div className="modal-buttons">
-        <button className="bg-red-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-red-600" onClick={confirmDelete}>Delete</button>
-        <button className="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400" onClick={closeModal}>Cancel</button>
+        <button className="bg-ink text-cream px-4 py-2 rounded-md mr-2 hover:bg-ink/80" onClick={confirmDelete}>Delete</button>
+        <button className="bg-cream border border-ink/15 text-ink px-4 py-2 rounded-md hover:bg-ink/5" onClick={closeModal}>Cancel</button>
       </div>
     </div>
   </div>

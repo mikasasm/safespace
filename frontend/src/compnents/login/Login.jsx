@@ -287,25 +287,25 @@ const Login = () => {
     <div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       {error && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-          <div className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
-            <div className="bg-red-100 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div className="fixed inset-0 bg-ink/75 transition-opacity" aria-hidden="true"></div>
+          <div className="bg-cream rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+            <div className="bg-sun px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
-                <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-200 sm:mx-0 sm:h-10 sm:w-10">
-                  <svg className="h-6 w-6 text-red-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-ink/10 sm:mx-0 sm:h-10 sm:w-10">
+                  <svg className="h-6 w-6 text-ink" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8V7a1 1 0 112 0v3a1 1 0 01-2 0zm0 4a1 1 0 112 0 1 1 0 01-2 0z" clipRule="evenodd" />
                   </svg>
                 </div>
                 <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">Error</h3>
+                  <h3 className="text-lg leading-6 font-medium text-ink">Error</h3>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">{error}</p>
+                    <p className="text-sm text-ink/70">{error}</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-              <button onClick={closeModal} type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+            <div className="bg-cream px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <button onClick={closeModal} type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-sun text-base font-medium text-ink hover:bg-sun/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink sm:ml-3 sm:w-auto sm:text-sm">
                 Close
               </button>
             </div>
@@ -313,16 +313,16 @@ const Login = () => {
         </div>
       )}
       <div className="w-screen mt-32">
-        <div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-md">
-          <div className="px-6 py-4" style={{ background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)' }}>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2 text-center">Sign in to your account</h2>
+        <div className="max-w-md mx-auto bg-cream rounded-lg overflow-hidden shadow-md ring-1 ring-ink/15">
+          <div className="px-6 py-4">
+            <h2 className="text-2xl font-bold text-ink mb-2 text-center">Sign in to your account</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+                <label className="block text-ink text-sm font-bold mb-2" htmlFor="username">
                   Username
                 </label>
                 <input
-                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:border-ink focus:ring-ink focus:shadow-outline"
                   id="username"
                   type="text"
                   placeholder="Enter username"
@@ -333,11 +333,11 @@ const Login = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                <label className="block text-ink text-sm font-bold mb-2" htmlFor="password">
                   Password
                 </label>
                 <input
-                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="appearance-none border border-ink/15 rounded w-full py-2 px-3 bg-cream text-ink placeholder:text-ink/50 leading-tight focus:outline-none focus:border-ink focus:ring-ink focus:shadow-outline"
                   id="password"
                   type="password"
                   placeholder="Enter password"
@@ -349,7 +349,7 @@ const Login = () => {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-cream border border-ink/15 hover:bg-ink/5 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                   onClick={() => {
                     setUsername('');
@@ -359,22 +359,22 @@ const Login = () => {
                   Cancel
                 </button>
                 <button
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-sun hover:bg-sun/80 text-ink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
                   Sign in
                 </button>
               </div>
             </form>
-            <p className="mt-10 text-center text-sm text-gray-500">
+            <p className="mt-10 text-center text-sm text-ink/70">
               Not a member?{' '}
-              <a href="/signup" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              <a href="/signup" className="font-semibold leading-6 text-ink underline hover:text-ink/70">
                 Signup Now
               </a>
             </p>
-            <p className="text-center text-sm text-gray-500">
+            <p className="text-center text-sm text-ink/70">
               Go back to Homepage?{' '}
-              <a href="/" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              <a href="/" className="font-semibold leading-6 text-ink underline hover:text-ink/70">
                 Go back
               </a>
             </p>
