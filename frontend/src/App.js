@@ -11,7 +11,6 @@ import ProfileUpdate from './compnents/profile/ProfileUpdate';
 import AnonymousSharing from './compnents/anonymous/AnonymousSharing';
 import AnonymousPost from './compnents/anonymous/AnonymousPost';
 import AllAnonymousPost from './compnents/anonymous/AllAnonymousPost';
-import AboutUs from './compnents/aboutUs/AboutUs';
 import Createjournal from './compnents/journal/Createjournal.jsx';
 import Readjournal from './compnents/journal/Readjournal.jsx';
 import JournalDetail from './compnents/journal/Readonejournal.jsx';
@@ -50,8 +49,7 @@ function App() {
         <Route path="/:username/mood" element={<PrivateRoute><MoodTrack /></PrivateRoute>} />
         <Route path="/:username/quiz" element={<PrivateRoute><Quiz /></PrivateRoute>} />
         <Route path="/:username/therapist" element={<PrivateRoute><Therapist /></PrivateRoute>} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        
+
 
 
         <Route path='/:username/createjournal' element={<PrivateRoute><Createjournal /></PrivateRoute>} />

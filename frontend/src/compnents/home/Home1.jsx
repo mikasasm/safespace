@@ -27,9 +27,8 @@ const Home1 = () => {
             Welcome to our mental health app, where you can anonymously chat, track your mood, and receive personalized support through quizzes and an AI assistant. Prioritize your emotional well-being discreetly and effectively with our compassionate community.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              
-              <a href="/aboutus" className="text-sm font-semibold leading-6 text-ink">
-                About Us <span aria-hidden="true">→</span>
+              <a href="/login" className="text-sm font-semibold leading-6 text-ink">
+                Get Started <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
